@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "TimeStampFormatter.init(xLabel:formatter:):TimeStampFormatter.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LightCharts.calculateLabelInAxisSize(config:):LightCharts_Line.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cos(90.0)">
+            </PersistentString>
+            <PersistentString
+               value = "cos(degrees:Double((90.0 - angleValue)))">
+            </PersistentString>
+            <PersistentString
+               value = "cos(degrees:Double((180)))">
+            </PersistentString>
+            <PersistentString
+               value = "cos(degrees:Double((90.0 )))">
+            </PersistentString>
+            <PersistentString
+               value = "cos(90.0 - angleValue)*majorSizeOfLabels">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LightCharts.plotPieChart(config:):LightCharts_Pie.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "serie.label">
+            </PersistentString>
+            <PersistentString
+               value = "serie.entries.count">
+            </PersistentString>
+            <PersistentString
+               value = "serie.colors">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimeStampFormatter.stringForValue(_:axis:):TimeStampFormatter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "formatter">
+            </PersistentString>
+            <PersistentString
+               value = "xLabel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LightCharts.plotLineChart(config:):LightCharts_Line.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "xLabel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LightCharts.plotBarChart(config:):LightCharts_Bar.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "chart.xAxis.labelWidth">
+            </PersistentString>
+            <PersistentString
+               value = "chart.xAxis.labelHeight">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LightCharts.plotBarChart():LightCharts.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "xAxisRange">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LightCharts.plotRadarChart(config:):LightCharts_Radar.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "serie.label">
+            </PersistentString>
+            <PersistentString
+               value = "dataEntry">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
