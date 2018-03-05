@@ -26,10 +26,12 @@ extension LightCharts {
         chart.rightAxis.enabled = false
         chart.backgroundColor = UIColor.white
         chart.translatesAutoresizingMaskIntoConstraints = false
-        chart.animate(xAxisDuration: 0, yAxisDuration: 2, easingOption: .easeInExpo)
         chart.noDataTextColor = UIColor.white
         chart.noDataText = "No data for the chart"
         chart.drawValueAboveBarEnabled = config.drawValueAboveBar
+        
+        let marker = BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 12), textColor: UIColor.white, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
+        chart.marker = marker
         
         legend = chart.legend
         
@@ -82,6 +84,9 @@ extension LightCharts {
                 let chartDataSet = BarChartDataSet(values: dataEntries, label: labelDesc)
                 chartDataSet.stackLabels = labels
                 chartDataSet.colors = colors
+                
+                
+                
                 chartData.addDataSet(chartDataSet)
             } else {
                 print("Problem to find a serie")
@@ -123,5 +128,7 @@ extension LightCharts {
         changeAxisFont(axisConfig: config.drawYAxis, axis: yAxis)
         
     }
+    
+    
     
 }

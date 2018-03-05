@@ -88,28 +88,23 @@ class ViewController: UIViewController {
         
         
         
-        let x = ["1","2","3","4","5"]
-        let y1:[Double] = [600,300,60,600,200]
-        let y2:[Double] = [300,200,20,300,500]
-        let serie = ColorSerie(label: "F100", entries: y1, colors: [UIColor.darkGray,UIColor.magenta,UIColor.blue,UIColor.green,UIColor.red])
-        let serie2 = Serie(label: "G100", entries: y2, color: UIColor.blue)
+        let x = ["B0OO","C000","D000","E000"]
+        let y1:[Double] = [100,200,300,400]
+        let serie = Serie(label: "Teste", entries: y1, color: UIColor.red)
+        //let serie2 = Serie(label: "G100", entries: y2, color: UIColor.blue)
         
-        let config = PieChartConfig()
-        config.drawValues = DrawPieValues.True(font: FontSize.Custom(font: UIFont.systemFont(ofSize: 40)), color: UIColor.red, formatter: .Percent, exteriorizeValue: true)
-        config.drawXAxis = DrawPieAxis.True(font: FontSize.Custom(font: UIFont.systemFont(ofSize: 30)), labelColor: UIColor.blue, exteriorizeValue: true)
-        config.drawHole = false
-    
+        let config = BarChartConfig()
+
+        
         let chart = LightCharts(graph: graph, config: config, serie: serie, xLabel: x)
         
         
         chart.plot()
         
-        sleep(2)
-        chart.saveToGallery()
+
+        chart.spinGraph(seconds:2,indexToSpin: 3)
         
-        
-        
-        
+        chart.highlightValueInGraph(xIndex: 3, dataSetIndex: 0)
         
         
         

@@ -19,12 +19,13 @@ extension LightCharts {
         radar.chartDescription?.enabled = false
         radar.backgroundColor = UIColor.white
         radar.translatesAutoresizingMaskIntoConstraints = false
-        
-        radar.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .easeInBounce)
         radar.noDataTextColor = UIColor.white
         radar.noDataText = "No data for the chart"
         
         radar.webAlpha = 1
+        
+        let marker = BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 12), textColor: UIColor.white, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
+        radar.marker = marker
         
         switch config.gridWidth {
         case .True(let width, let color):

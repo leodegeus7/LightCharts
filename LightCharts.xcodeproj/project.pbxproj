@@ -26,6 +26,7 @@
 		CD86B4052037512D0040D73B /* LightCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD746492202DCCDA0095CBC4 /* LightCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD86B40A20375E170040D73B /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86B40920375E170040D73B /* StringFormatter.swift */; };
 		CD9D35CC202E03B300FB149A /* LightCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D35CB202E03B300FB149A /* LightCharts.swift */; };
+		CDB9E5EB20488BDA0014A230 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB9E5EA20488BDA0014A230 /* BalloonMarker.swift */; };
 		CDC19D16203F3CA200C65E53 /* LightCharts_Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC19D15203F3CA200C65E53 /* LightCharts_Bar.swift */; };
 		CDC19D18203F3D4E00C65E53 /* LightCharts_Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC19D17203F3D4E00C65E53 /* LightCharts_Line.swift */; };
 		CDC19D1A203F3D7000C65E53 /* LightCharts_Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC19D19203F3D7000C65E53 /* LightCharts_Pie.swift */; };
@@ -120,6 +121,7 @@
 		CD83E24A20407EE5005BA31D /* IntegerFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerFormat.swift; sourceTree = "<group>"; };
 		CD86B40920375E170040D73B /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
 		CD9D35CB202E03B300FB149A /* LightCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCharts.swift; sourceTree = "<group>"; };
+		CDB9E5EA20488BDA0014A230 /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		CDC19D15203F3CA200C65E53 /* LightCharts_Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCharts_Bar.swift; sourceTree = "<group>"; };
 		CDC19D17203F3D4E00C65E53 /* LightCharts_Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCharts_Line.swift; sourceTree = "<group>"; };
 		CDC19D19203F3D7000C65E53 /* LightCharts_Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightCharts_Pie.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 			children = (
 				CD4EEC4C203C868D00F61509 /* Serie.swift */,
 				CDEADB4B203DEDDA003A17AC /* ChartBarConfig.swift */,
+				CDB9E5EA20488BDA0014A230 /* BalloonMarker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				CDEADB4C203DEDDA003A17AC /* ChartBarConfig.swift in Sources */,
 				CDC19D18203F3D4E00C65E53 /* LightCharts_Line.swift in Sources */,
 				CDC19D1A203F3D7000C65E53 /* LightCharts_Pie.swift in Sources */,
+				CDB9E5EB20488BDA0014A230 /* BalloonMarker.swift in Sources */,
 				CD4EEC4D203C868D00F61509 /* Serie.swift in Sources */,
 				CD83E24B20407EE5005BA31D /* IntegerFormat.swift in Sources */,
 				CDC19D16203F3CA200C65E53 /* LightCharts_Bar.swift in Sources */,

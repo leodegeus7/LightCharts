@@ -23,9 +23,11 @@ extension LightCharts {
         line.rightAxis.enabled = false
         line.backgroundColor = UIColor.white
         line.translatesAutoresizingMaskIntoConstraints = false
-        line.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .easeInBounce)
         line.noDataTextColor = UIColor.white
         line.noDataText = "No data for the chart"
+        
+        let marker = BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 12), textColor: UIColor.white, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
+        line.marker = marker
         
         legend = line.legend
         

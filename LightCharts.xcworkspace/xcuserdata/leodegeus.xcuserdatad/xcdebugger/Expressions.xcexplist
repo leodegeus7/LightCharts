@@ -3,7 +3,20 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "TimeStampFormatter.init(xLabel:formatter:):TimeStampFormatter.swift">
+         contextName = "LightCharts.highlightValueInGraph(xIndex:dataSetIndex:):LightCharts.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "series[dataSetIndex].entries">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LightCharts.plotBarChart():LightCharts.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "xAxisRange">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "LightCharts.calculateLabelInAxisSize(config:):LightCharts_Line.swift">
@@ -26,27 +39,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "LightCharts.plotPieChart(config:):LightCharts_Pie.swift">
+         contextName = "LightCharts.spinGraph(seconds:indexToSpin:):LightCharts_Pie.swift">
          <PersistentStrings>
             <PersistentString
-               value = "serie.label">
-            </PersistentString>
-            <PersistentString
-               value = "serie.entries.count">
-            </PersistentString>
-            <PersistentString
-               value = "serie.colors">
+               value = "pie.rotationAngle">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "TimeStampFormatter.stringForValue(_:axis:):TimeStampFormatter.swift">
+         contextName = "LightCharts.spinGraph(seconds:itemToMove:):LightCharts_Pie.swift">
          <PersistentStrings>
             <PersistentString
-               value = "formatter">
+               value = "pie.absoluteAngles">
             </PersistentString>
             <PersistentString
-               value = "xLabel">
+               value = "pie.rotationAngle">
+            </PersistentString>
+            <PersistentString
+               value = "centerAngles[itemToMove-1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -70,10 +80,27 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "LightCharts.plotBarChart():LightCharts.swift">
+         contextName = "LightCharts.spinGraph(seconds:toAngle:):LightCharts_Pie.swift">
          <PersistentStrings>
             <PersistentString
-               value = "xAxisRange">
+               value = "pie.absoluteAngles">
+            </PersistentString>
+            <PersistentString
+               value = "pie.drawAngles">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TimeStampFormatter.init(xLabel:formatter:):TimeStampFormatter.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TimeStampFormatter.stringForValue(_:axis:):TimeStampFormatter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "formatter">
+            </PersistentString>
+            <PersistentString
+               value = "xLabel">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -85,6 +112,20 @@
             </PersistentString>
             <PersistentString
                value = "dataEntry">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LightCharts.plotPieChart(config:):LightCharts_Pie.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "serie.label">
+            </PersistentString>
+            <PersistentString
+               value = "serie.entries.count">
+            </PersistentString>
+            <PersistentString
+               value = "serie.colors">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

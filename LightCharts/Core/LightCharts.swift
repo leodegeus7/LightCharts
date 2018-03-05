@@ -155,7 +155,7 @@ public class LightCharts: NSObject {
     public func saveToGallery() {
         
         UIImageWriteToSavedPhotosAlbum(chartView.getChartImage(transparent: false)!, self,  #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-    
+        
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
@@ -282,6 +282,38 @@ public class LightCharts: NSObject {
                 }
             }
             xAxis.valueFormatter = TimeStampFormatter(xLabel: values, formatter: formatter)
+        }
+    }
+    
+    public func highlightValueInGraph(xIndex:Int,dataSetIndex:Int) {
+        if series.count > dataSetIndex {
+            switch type! {
+            case .Bar:
+                let y = series[dataSetIndex].entries[xIndex]
+                let h = Highlight(x: Double(xIndex), y: y, dataSetIndex: dataSetIndex)
+                let bar = chartView as! BarChartView
+                bar.highlightValue(h)
+                break
+            case .Line:
+                let y = series[dataSetIndex].entries[xIndex]
+                let h = Highlight(x: Double(xIndex), y: y, dataSetIndex: dataSetIndex)
+                let bar = chartView as! LineChartView
+                bar.highlightValue(h)
+                break
+            case .Pie:
+                let h = Highlight(x: Double(xIndex), y: 0, dataSetIndex: 0)
+                let pie = chartView as! PieChartView
+                pie.highlightValue(h)
+                break
+            case .Radar:
+                let y = series[dataSetIndex].entries[xIndex]
+                let h = Highlight(x: Double(xIndex), y: y, dataSetIndex: dataSetIndex)
+                let radar = chartView as! RadarChartView
+                radar.highlightValue(h)
+                break
+            }
+        } else {
+            print("Didn't find dataSetIndex")
         }
     }
     

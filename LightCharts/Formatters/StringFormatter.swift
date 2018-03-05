@@ -18,7 +18,6 @@ public class StringFormatter: NSObject,IAxisValueFormatter {
     }
     
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        print(value)
         if Int(value) < xLabel.count {
             return xLabel[Int(value)]
         } else {

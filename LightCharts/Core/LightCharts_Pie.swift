@@ -19,10 +19,9 @@ extension LightCharts {
         pie.chartDescription?.enabled = false
         pie.backgroundColor = UIColor.white
         pie.translatesAutoresizingMaskIntoConstraints = false
-        pie.animate(xAxisDuration: 2, yAxisDuration: 2, easingOption: .easeInBounce)
         pie.noDataTextColor = UIColor.white
         pie.noDataText = "No data for the chart"
-        
+        pie.rotationAngle = 270
         legend = pie.legend
         
         let chartData = PieChartData()
@@ -40,7 +39,8 @@ extension LightCharts {
         let pieDataSet = PieChartDataSet(values: dataEntries, label: serie.label)
         pieDataSet.sliceSpace = 2
         
-    
+
+        
         pieDataSet.colors = serie.colors
         chartData.addDataSet(pieDataSet)
         
@@ -118,13 +118,66 @@ extension LightCharts {
                 break
             }
         }
-        
+        pie.highlightValue(Highlight())
         pie.drawHoleEnabled = !config.drawHole
         
         pie.centerText = config.centerText
         pie.drawCenterTextEnabled = true
+        
         //Create DataSet
         pie.data = chartData
+        
+    }
+    
+    
+    public func spinGraph(seconds:Float,indexToSpin:Int) {
+        if type == .Pie {
+            let pie = chartView as! PieChartView
+            
+            var centerAngles:[Float] = []
+            var initialAngle:CGFloat = 0
+            for angle in pie.absoluteAngles {
+                let centerAngle = (angle - initialAngle)/2 + initialAngle
+                centerAngles.append(Float(centerAngle))
+                initialAngle = angle
+            }
+            if indexToSpin < centerAngles.count || indexToSpin == 0 {
+                let itemAngle = 270.0 - centerAngles[indexToSpin]
+                let rotationAngle = pie.rotationAngle
+                pie.spin(duration: TimeInterval(seconds), fromAngle: rotationAngle, toAngle: CGFloat(itemAngle))
+            } else {
+                print("Item to go in spin don't exist")
+            }
+            
+        } else if type == .Radar {
+            let pie = chartView as! RadarChartView
+            
+            var centerAngles:[Float] = []
+            var initialAngle:CGFloat = 0
+            
+            var angles = [CGFloat]()
+            
+            for index in 1...xLabel.count {
+                let restAngle = (360.0)/CGFloat(xLabel.count)
+                angles.append(restAngle*CGFloat(index))
+            }
+            
+            for angle in angles {
+                
+                let centerAngle = (angle - initialAngle)/2 + initialAngle
+                centerAngles.append(Float(centerAngle))
+                initialAngle = angle
+            }
+            if indexToSpin < centerAngles.count || indexToSpin == 0 {
+                let itemAngle = 270.0 - centerAngles[indexToSpin]
+                let rotationAngle = pie.rotationAngle
+                pie.spin(duration: TimeInterval(seconds), fromAngle: rotationAngle, toAngle: CGFloat(itemAngle))
+            } else {
+                print("Item to go in spin don't exist")
+            }
+        } else {
+            print("Not possivle to spin, because this is not a pie")
+        }
     }
     
     
