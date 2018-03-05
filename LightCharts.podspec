@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "LightCharts"
-s.version      = "0.0.1"
+s.version      = "0.0.2"
 s.summary      = "This is a simplification of Charts Framework"
 
 # This description is used to generate tags and improve search results.
