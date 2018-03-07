@@ -65,6 +65,8 @@ chart.highlightValueInGraph(xIndex: 3, dataSetIndex: 0)
 ```
 
 
+![Alt Text](https://media.giphy.com/media/3mgxJ9dfVNR32prrGV/giphy.gif)
+
 
 ## Release History
 
@@ -73,6 +75,10 @@ chart.highlightValueInGraph(xIndex: 3, dataSetIndex: 0)
 * 0.0.2
     * Added Animations
 
+## References
+
+Charts: [https://github.com/danielgindi/Charts](https://github.com/danielgindi/Charts)
+
 ## Meta
 
 Leonardo Alexandre de Geus – [@leodegeus7](https://www.linkedin.com/in/leodegeus7/) – leonardodegeus@gmail.com
@@ -80,3 +86,5 @@ Leonardo Alexandre de Geus – [@leodegeus7](https://www.linkedin.com/in/leodege
 See ``LICENSE`` for more information.
 
 [https://github.com/leodegeus7](https://github.com/leodegeus7)
+
+
