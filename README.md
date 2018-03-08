@@ -22,7 +22,7 @@ To use this tool you need to follow few steps:
 
 1) Create a UIView in your Storyboard
 2) Link an outlet of this view in your Controller and import the framework LightCharts;
-3) Create your series to plot in graph, graphs may have more than one serie, so feel free to create as many serie as you want
+3) Create your series to plot in graph, graphs may have more than one serie, so feel free to create as many serie as you want.
 
 ```sh
 let x = ["B0OO","C000","D000","E000"]
@@ -47,6 +47,13 @@ let chart = LightCharts(graph: graph, config: config, serie: serie, xLabel: x)
 chart.plot()
 ```
 
+   If you want to create a multi-serie graph, use:
+
+```sh
+let chart = LightCharts(graph: graph, config: config, series: [serie1,serie2], xLabel: x)
+chart.plot()
+```
+
 **EXTRAS**
 6) Customization. For example, to draw the values in the middle of the bar and change the size of label in X Axis just edit the config file:
 Hint: pass *nil* on properties you dont want to change, this tool will get the best parameters to you.
@@ -64,9 +71,14 @@ chart.spinGraph(seconds:2,indexToSpin: 3)
 chart.highlightValueInGraph(xIndex: 3, dataSetIndex: 0)
 ```
 
-
 ![Alt Text](https://media.giphy.com/media/3mgxJ9dfVNR32prrGV/giphy.gif)
 
+## Hints
+If you want to create a colorful serie, instantiate the following code instead of Serie, this is the unique way to diferenciate data in PieChart
+
+```sh
+ColorSerie(label: String, entries: [Double], color: [UIColor])
+```
 
 ## Release History
 
