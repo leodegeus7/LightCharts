@@ -19,16 +19,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDn-SA-E5f">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="5" y="70" width="340" height="577"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bar Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-DA-stD">
+                                <rect key="frame" x="118" y="40" width="139" height="39.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="33"/>
+                                <color key="textColor" red="0.082810991868655121" green="0.084331252731054837" blue="0.091699825310559008" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EDn-SA-E5f" secondAttribute="bottom" id="R2u-vv-ur6"/>
-                            <constraint firstItem="EDn-SA-E5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iiu-aM-PCy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDn-SA-E5f" secondAttribute="trailing" id="vDy-T0-xqQ"/>
-                            <constraint firstItem="EDn-SA-E5f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zDa-86-DGN"/>
+                            <constraint firstItem="A9C-DA-stD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="30A-QB-bk3"/>
+                            <constraint firstItem="EDn-SA-E5f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="3eH-3H-LY1"/>
+                            <constraint firstItem="A9C-DA-stD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Klp-Tn-0Y9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EDn-SA-E5f" secondAttribute="bottom" constant="20" id="R2u-vv-ur6"/>
+                            <constraint firstItem="EDn-SA-E5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="iiu-aM-PCy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDn-SA-E5f" secondAttribute="trailing" constant="30" id="vDy-T0-xqQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

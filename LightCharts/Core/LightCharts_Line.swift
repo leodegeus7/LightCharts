@@ -25,7 +25,8 @@ extension LightCharts {
         line.translatesAutoresizingMaskIntoConstraints = false
         line.noDataTextColor = UIColor.white
         line.noDataText = "No data for the chart"
-        
+
+        line.backgroundColor = config.backGroundColor
         let marker = BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 12), textColor: UIColor.white, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
         line.marker = marker
         
@@ -104,6 +105,7 @@ extension LightCharts {
         xAxis.labelPosition = .bottom
         xAxis.labelFont = .systemFont(ofSize: 10)
         xAxis.granularity = 1
+        xAxis.labelCount = xLabel.count
         changeXLabelAngle(xAxis: xAxis)
         
         changeFormatterInXAxis(config: config.xLabelFormatter, xAxis: xAxis)

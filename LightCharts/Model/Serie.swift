@@ -30,7 +30,7 @@ public class ColorSerie: SerieProtocol {
     }
 }
 
-public class Serie: SerieProtocol {
+public class SimpleSerie: SerieProtocol {
     public var label: String
     public var entries: [Double]
     public var colors: [UIColor]

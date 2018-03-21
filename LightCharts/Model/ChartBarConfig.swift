@@ -108,7 +108,7 @@ public enum DrawPieValues {
 }
 
 public protocol ChartConfigProtocol {
-
+    var backGroundColor:UIColor? {get set}
 
 }
 
@@ -130,6 +130,7 @@ public protocol SimpleGraphProtocol:ChartConfigProtocol {
 }
 
 public class BarChartConfig: TwoDimensionGraphProtocol,SimpleGraphProtocol {
+    public var backGroundColor: UIColor? = UIColor.clear
     public var xLabelFormatter: XLabelFormatter = .String
     public var drawXAxis: DrawAxis? = .True(font: FontSize.Medium, labelColor: UIColor.black, drawGrid: true)
     public var drawYAxis: DrawAxis? = .True(font: FontSize.Medium, labelColor: UIColor.black, drawGrid: true)
@@ -146,6 +147,7 @@ public class BarChartConfig: TwoDimensionGraphProtocol,SimpleGraphProtocol {
 }
 
 public class LineChartConfig: TwoDimensionGraphProtocol,SimpleGraphProtocol {
+    public var backGroundColor: UIColor? = UIColor.clear
     public var xLabelFormatter: XLabelFormatter = .String
     public var drawXAxis: DrawAxis? = .True(font: FontSize.Medium, labelColor: UIColor.black, drawGrid: true)
     public var drawYAxis: DrawAxis? = .True(font: FontSize.Medium, labelColor: UIColor.black, drawGrid: true)
@@ -161,6 +163,7 @@ public class LineChartConfig: TwoDimensionGraphProtocol,SimpleGraphProtocol {
 }
 
 public class RadarChartConfig:TwoDimensionGraphProtocol {
+    public var backGroundColor: UIColor? = UIColor.clear
     public var yRange: (Int?, Int?) = (nil,nil)
     public var xLabelAngle: XLabelAngle = .a0
     public var xLabelFormatter: XLabelFormatter = .String
@@ -179,7 +182,7 @@ public class RadarChartConfig:TwoDimensionGraphProtocol {
 
 
 public class PieChartConfig:OneDimensionGraphProtocol {
-    
+    public var backGroundColor: UIColor? = UIColor.clear
     public var drawValues:DrawPieValues? = .False
     public var drawXAxis:DrawPieAxis? = .False
     public var drawHole:Bool = false

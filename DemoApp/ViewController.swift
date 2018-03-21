@@ -88,32 +88,99 @@ class ViewController: UIViewController {
         
         
         
-        let x = ["B0OO","C000","D000","E000"]
-        let y1:[Double] = [100,200,300,400]
-        let serie = Serie(label: "Teste", entries: y1, color: UIColor.red)
-        //let serie2 = Serie(label: "G100", entries: y2, color: UIColor.blue)
+//        let x = ["B0OO","C000","D000","E000"]
+//        let y1:[Double] = [100,200,140,210]
+//
+//        let serie = ColorSerie(label: "Production", entries: y1, colors: [UIColor(red: 0, green: 189/255, blue: 201/255, alpha: 1),UIColor(red: 223/255, green: 72/255, blue: 99/255, alpha: 1)])
+//
+//        let config = BarChartConfig()
+//        config.drawXAxis = .True(font: .Medium, labelColor: nil, drawGrid: false)
+//        config.drawYAxis = DrawAxis.True(font: .Medium, labelColor: nil, drawGrid: false)
+//
+
+//
+//
+//
+//        let chart = LightCharts(graph: graph, config: config, serie: serie, xLabel: x)
+//
+//
+//        chart.plot()
+//        chart.spinGraph(seconds:2,indexToSpin: 3)
         
+        
+        
+        
+        
+        self.view.backgroundColor = UIColor.red
+        
+        let x = ["B0OO","C000","D000","E000"]
+        let y1:[Double] = [100,200,140,210]
+        let y2:[Double] = [150,220,120,200]
+        let serie = ColorSerie(label: "Morning", entries: y1, colors: [UIColor(red: 0, green: 189/255, blue: 201/255, alpha: 1),UIColor(red: 223/255, green: 72/255, blue: 99/255, alpha: 1),UIColor(red: 0, green: 189/255, blue: 201/255, alpha: 1),UIColor(red: 223/255, green: 72/255, blue: 99/255, alpha: 1)])
+
+        //let serie2 = Serie(label: "G100", entries: y2, color: UIColor.blue)
+
         let config = BarChartConfig()
 
-        
-        let chart = LightCharts(graph: graph, config: config, serie: serie, xLabel: x)
-        
-        
-        chart.plot()
+        //let config = PieChartConfig()
+        //let config = LineChartConfig()
+        //let config = RadarChartConfig
+
+
+
+        let chart = LightCharts(config: config, serie: serie, xLabel: x)
+
+
+        chart.plot(view: graph)
         
 
-        chart.spinGraph(seconds:2,indexToSpin: 3)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            chart.spinGraph(seconds:2,indexToSpin: 2)
+            chart.highlightValueInGraph(xIndex: 2, dataSetIndex: 0)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                chart.spinGraph(seconds:2,indexToSpin: 4)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    chart.spinGraph(seconds:2,indexToSpin: 1)
+                }
+            }
+            
+        }
         
-        chart.highlightValueInGraph(xIndex: 3, dataSetIndex: 0)
         
         
+
         
-        
-        
-        
-        
-        
-        
+        sleep(3)
+
+//        let x = ["B0OO","C000","D000","E000"]
+//        let y1:[Double] = [100,200,140,210]
+//        let y2:[Double] = [150,220,120,200]
+//
+//        let serie = ColorSerie(label: "Morning", entries: y1, colors: [UIColor(red: 0, green: 189/255, blue: 201/255, alpha: 1)])
+//
+//        let serie2 = ColorSerie(label: "Afternoon", entries: y2, colors: [UIColor(red: 223/255, green: 72/255, blue: 99/255, alpha: 1)])
+//
+////        let serie2 = ColorSerie(label: "Afternoon", entries: y2, colors: [UIColor(red: 223/255, green: 72/255, blue: 99/255, alpha: 1)])
+//
+//        //let serie2 = Serie(label: "G100", entries: y2, color: UIColor.blue)
+//
+//        let config = RadarChartConfig()
+//        config.fillDataSets = FillDataSets.True(alpha: 0.8)
+//        config.gridWidth = ActivateRadarGrid.True(width: nil, color: UIColor.darkGray)
+//        //config.drawValues = DrawPieValues.True(font: nil, color: nil, formatter: nil, exteriorizeValue: nil)
+//        //let config = PieChartConfig()
+//        //let config = LineChartConfig()
+//        //let config = RadarChartConfig
+//
+//
+//
+//        let chart = LightCharts(graph: graph, config: config, series: [serie,serie2], xLabel: x)
+//
+//
+//        chart.plot()
+//        chart.spinGraph(seconds:2,indexToSpin: 3)
         
         
         

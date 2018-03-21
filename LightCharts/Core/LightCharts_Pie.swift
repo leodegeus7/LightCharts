@@ -23,7 +23,7 @@ extension LightCharts {
         pie.noDataText = "No data for the chart"
         pie.rotationAngle = 270
         legend = pie.legend
-        
+        pie.backgroundColor = config.backGroundColor
         let chartData = PieChartData()
         
         let serie = series.first!

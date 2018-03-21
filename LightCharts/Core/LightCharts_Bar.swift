@@ -24,12 +24,12 @@ extension LightCharts {
         chart.setScaleEnabled(true)
         chart.pinchZoomEnabled = false
         chart.rightAxis.enabled = false
-        chart.backgroundColor = UIColor.white
+        chart.backgroundColor = UIColor.clear
         chart.translatesAutoresizingMaskIntoConstraints = false
         chart.noDataTextColor = UIColor.white
         chart.noDataText = "No data for the chart"
         chart.drawValueAboveBarEnabled = config.drawValueAboveBar
-        
+        chart.backgroundColor = config.backGroundColor
         let marker = BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 12), textColor: UIColor.white, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
         chart.marker = marker
         

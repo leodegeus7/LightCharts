@@ -25,13 +25,13 @@ public class LightCharts: NSObject {
     
     var chartView:ChartViewBase!
     
+    public var title = ""
     public var legend:Legend!
     private var config:ChartConfigProtocol!
     
     
-    public init(graph:UIView,config:ChartConfigProtocol,serie:SerieProtocol,xLabel:[String]) {
+    public init(config:ChartConfigProtocol,serie:SerieProtocol,xLabel:[String]) {
         super.init()
-        self.view = graph
         self.config = config
         self.series = []
         self.series.append(serie)
@@ -39,16 +39,16 @@ public class LightCharts: NSObject {
         setType(config: config)
     }
     
-    public init(graph:UIView,config:ChartConfigProtocol,series:[SerieProtocol],xLabel:[String]) {
+    public init(config:ChartConfigProtocol,series:[SerieProtocol],xLabel:[String]) {
         super.init()
-        self.view = graph
         self.series = series
         self.xLabel = xLabel
         self.config = config
         setType(config: config)
     }
     
-    private func setType (config:ChartConfigProtocol) {
+    
+    private func setType(config:ChartConfigProtocol) {
         if let _ = config as? PieChartConfig {
             type = .Pie
         } else if let _ = config as? LineChartConfig {
@@ -60,7 +60,8 @@ public class LightCharts: NSObject {
         }
     }
     
-    public func plot() {
+    public func plot(view:UIView) {
+        self.view = view
         if let pie = config as? PieChartConfig {
             plotPieChart(config: pie)
         } else if let line = config as? LineChartConfig {
