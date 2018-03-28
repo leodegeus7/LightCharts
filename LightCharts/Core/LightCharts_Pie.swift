@@ -70,10 +70,16 @@ extension LightCharts {
                     chartData.setValueTextColor(c)
                 }
                 if let _ = exteriorize {
-                    pieDataSet.valueLinePart1OffsetPercentage = 0.8
-                    pieDataSet.valueLinePart1Length = 0.4
-                    pieDataSet.valueLinePart2Length = 0.4
-                    pieDataSet.yValuePosition = .outsideSlice
+                    if exteriorize == true {
+                        pieDataSet.valueLinePart1OffsetPercentage = 0.8
+                        pieDataSet.valueLinePart1Length = 0.4
+                        pieDataSet.valueLinePart2Length = 0.4
+                        pieDataSet.yValuePosition = .outsideSlice
+                        
+                    } else {
+                        pieDataSet.yValuePosition = .insideSlice
+                    }
+
                 } else {
                     pieDataSet.yValuePosition = .insideSlice
                 }
