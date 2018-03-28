@@ -26,6 +26,7 @@ public class LightCharts: NSObject {
     var chartView:ChartViewBase!
     
     public var title = ""
+    public var date:Date!
     public var legend:Legend!
     private var config:ChartConfigProtocol!
     
