@@ -24,7 +24,7 @@ extension LightCharts {
         radar.backgroundColor = config.backGroundColor
         radar.webAlpha = 1
         
-        let marker = BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 12), textColor: UIColor.white, insets: UIEdgeInsetsMake(8.0, 8.0, 20.0, 8.0))
+        let marker = BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 12), textColor: UIColor.white, insets: UIEdgeInsets.init(top: 8.0, left: 8.0, bottom: 20.0, right: 8.0))
         radar.marker = marker
         
         switch config.gridWidth {

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #
 
 s.name         = "LightCharts"
-s.version      = "0.0.23"
+s.version      = "0.0.24"
 s.summary      = "This is a simplification of Charts Framework"
 
 # This description is used to generate tags and improve search results.
@@ -133,6 +133,6 @@ s.exclude_files = "Classes/Exclude"
 # s.requires_arc = true
 
 # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-s.dependency "Charts", "~> 3.0.5"
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4'}
+s.dependency "Charts", "~> 3.2.2"
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2'}
 end

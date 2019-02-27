@@ -86,7 +86,9 @@ ColorSerie(label: String, entries: [Double], color: [UIColor])
     * First Commit
 * 0.0.2
     * Added Animations
-
+* 0.0.24
+    * Support to Swift 4.2
+    
 ## References
 
 Charts: [https://github.com/danielgindi/Charts](https://github.com/danielgindi/Charts)

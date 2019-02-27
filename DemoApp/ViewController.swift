@@ -181,41 +181,7 @@ class ViewController: UIViewController {
 //
 //        chart.plot()
 //        chart.spinGraph(seconds:2,indexToSpin: 3)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
     }
 
     override func didReceiveMemoryWarning() {
